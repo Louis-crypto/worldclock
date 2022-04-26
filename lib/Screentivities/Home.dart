@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
 
     // set background image
     String backgroundImage = loadedData['isDayTime'] ? 'day3bright.jpeg' : 'night1dark.jpeg';
-    Color? backgroundColor = loadedData['isDayTime'] ? Colors.blue[900] : Colors.black26;
+    Color? backgroundColor = loadedData['isDayTime'] ? Colors.blue[900] : Colors.deepPurple[900];
 
 
     return Scaffold(
@@ -36,12 +36,20 @@ class _HomeState extends State<Home> {
             child: Column(
               children: [
                 FlatButton.icon(
-                  color: Colors.white,
                     onPressed: (){
                       Navigator.pushNamed(context, '/location');
                     },
-                    icon: Icon(Icons.edit_location),
-                    label: Text('Select location')
+                    icon: Icon(
+                      Icons.edit_location,
+                      color: Colors.white,
+                    ),
+                    label: Text(
+                        'Select location',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18.0,
+                      ),
+                    )
                 ),
                 SizedBox(height: 20.0),
                 Row(
