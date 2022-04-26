@@ -28,11 +28,8 @@ class _ProgressActivityState extends State<ProgressActivity> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(50.0),
-        child: Text(
-          'hahahahhahahahahahahah'
-        ),
+      body: Center(
+
       ),
     );
   }
