@@ -23,6 +23,8 @@ class _LocationState extends State<Location> {
   ];
 
   void updateTime(index) async{
+    WorldTime selectedLocation = locations[index];
+    await selectedLocation.getTime();
 
   }
 
