@@ -17,6 +17,7 @@ class _ProgressActivityState extends State<ProgressActivity> {
       'location': worldTime.location,
       'flag': worldTime.flag,
       'time': worldTime.time,
+      'isDayTime': worldTime.isDayTime,
     });
   }
 
