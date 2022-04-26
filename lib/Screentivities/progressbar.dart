@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:world_time/services/worldtime.dart';
 
 class ProgressActivity extends StatefulWidget {
@@ -29,7 +30,10 @@ class _ProgressActivityState extends State<ProgressActivity> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-
+        child: SpinKitRotatingCircle(
+            color: Colors.black,
+            size: 50.0,
+          ),
       ),
     );
   }
