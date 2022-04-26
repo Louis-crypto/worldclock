@@ -30,7 +30,7 @@ class _ProgressActivityState extends State<ProgressActivity> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: SpinKitRotatingCircle(
+        child: SpinKitWanderingCubes(
             color: Colors.black,
             size: 50.0,
           ),
