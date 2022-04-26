@@ -8,6 +8,7 @@ class WorldTime{
   String time = "";
   String flag;
   String urrl;
+  late bool isDayTime;
 
 
   WorldTime(this.location, this.flag, this.urrl);
