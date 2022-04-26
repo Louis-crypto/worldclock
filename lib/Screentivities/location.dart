@@ -10,17 +10,21 @@ class Location extends StatefulWidget {
 class _LocationState extends State<Location> {
 
   List<WorldTime> locations = [
-    WorldTime('Accra', 'flag', 'Africa/Accra'),
-    WorldTime('Chicago', 'flag', 'America/Chicago'),
-    WorldTime('Denver', 'flag', 'America/Denver'),
-    WorldTime('Dubai', 'flag', 'Asia/Dubai'),
-    WorldTime('London', 'flag', 'Europe/London'),
-    WorldTime('Mauritius', 'flag', 'Indian/Mauritius'),
-    WorldTime('Nairobi', 'flag', 'Africa/Nairobi'),
-    WorldTime('Rome', 'flag', 'Europe/Rome'),
-    WorldTime('Shanghai', 'flag', 'Asia/Shanghai'),
-    WorldTime('Sydney', 'flag', 'Australia/Sydney'),
+    WorldTime('Accra', 'ghanaflag.png', 'Africa/Accra'),
+    WorldTime('Chicago', 'usaflag.png', 'America/Chicago'),
+    WorldTime('Denver', 'usaflag.png', 'America/Denver'),
+    WorldTime('Dubai', 'uaeflag.png', 'Asia/Dubai'),
+    WorldTime('London', 'englandflag.png', 'Europe/London'),
+    WorldTime('Mauritius', 'mauritiusflag.png', 'Indian/Mauritius'),
+    WorldTime('Nairobi', 'kenyaflag.png', 'Africa/Nairobi'),
+    WorldTime('Rome', 'italyflag.png', 'Europe/Rome'),
+    WorldTime('Shanghai', 'chinaflag.png', 'Asia/Shanghai'),
+    WorldTime('Sydney', 'australiaflag.png', 'Australia/Sydney'),
   ];
+
+  void updateTime(index) async{
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +39,18 @@ class _LocationState extends State<Location> {
       body: ListView.builder(
         itemCount: locations.length,
         itemBuilder: (context, index){
-          return Card(
-            child: ListTile(
-              onTap: (){},
-              title: Text(locations[index].location),
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 2.0, horizontal: 4.0),
+            child: Card(
+              child: ListTile(
+                onTap: (){
+                  updateTime(index);
+                },
+                title: Text(locations[index].location),
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage('assets/${locations[index].flag}'),
+                ),
+              ),
             ),
           );
         },
