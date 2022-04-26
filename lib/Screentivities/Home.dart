@@ -16,14 +16,17 @@ class _HomeState extends State<Home> {
 
     // set background image
     String backgroundImage = loadedData['isDayTime'] ? 'day3bright.jpeg' : 'night1dark.jpeg';
+    Color? backgroundColor = loadedData['isDayTime'] ? Colors.blue[900] : Colors.black26;
+
 
     return Scaffold(
+      backgroundColor: backgroundColor,
       body: SafeArea(
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
-                'assets/night1dark.jpeg'),
+                'assets/$backgroundImage'),
               fit: BoxFit.cover,
 
             ),
