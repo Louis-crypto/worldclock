@@ -30,9 +30,10 @@ class _ProgressActivityState extends State<ProgressActivity> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue,
       body: Center(
         child: SpinKitWanderingCubes(
-            color: Colors.black,
+            color: Colors.white,
             size: 50.0,
           ),
       ),
