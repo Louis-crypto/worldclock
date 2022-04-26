@@ -26,6 +26,13 @@ class _LocationState extends State<Location> {
     WorldTime selectedLocation = locations[index];
     await selectedLocation.getTime();
 
+    //navigate to homescreen
+    Navigator.pop(context, {
+      'location': selectedLocation.location,
+      'flag': selectedLocation.flag,
+      'time': selectedLocation.time,
+      'isDayTime': selectedLocation.isDayTime,
+    });
   }
 
   @override

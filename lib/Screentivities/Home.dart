@@ -36,8 +36,8 @@ class _HomeState extends State<Home> {
             child: Column(
               children: [
                 FlatButton.icon(
-                    onPressed: (){
-                      Navigator.pushNamed(context, '/location');
+                    onPressed: () async{
+                      dynamic chosenResult = await Navigator.pushNamed(context, '/location');
                     },
                     icon: Icon(
                       Icons.edit_location,
